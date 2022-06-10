@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="xuqiu.spring.Mapper.AdminMapper">
+
+    <insert id="insert" parameterType="Admin" >
+        INSERT into adminlist (username,password,`name`,usertype,email,phone,sex,birthday) values (#{username},#{password},#{name},#{usertype},#{email},#{phone},#{sex},#{birthday})
+    </insert>
+
+    <delete id="delete" parameterType="Admin">
+        delete from adminlist where id=#{username}
+    </delete>
+
+    <update id="edit" parameterType="Admin" >
+        update adminlist set password = #{password},`name`=#{name},usertype=#{usertype},email=#{email},phone=#{phone},sex=#{sex},birthday=#{birthday} where username = #{username}
+    </update>
+
+    <select id="query" resultType="Admin" >
+        select * from adminlist
+    </select>
+    <select id="queryTheUser" resultType="xuqiu.spring.Pojo.Admin">
+        select * from adminlist where username=#{username}
+    </select>
+
+</mapper>

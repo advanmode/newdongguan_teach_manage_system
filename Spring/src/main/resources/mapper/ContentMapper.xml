@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="xuqiu.spring.Mapper.ContentMapper">
+
+
+    <update id="updateContent" parameterType="xuqiu.spring.Pojo.Content">
+        update content set a=#{a},b=#{b},c=#{c},d=#{d}
+    </update>
+    <select id="queryContent" resultType="xuqiu.spring.Pojo.Content">
+        select * from content;
+    </select>
+</mapper>

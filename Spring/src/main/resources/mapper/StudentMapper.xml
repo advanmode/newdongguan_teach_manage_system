@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="xuqiu.spring.Mapper.StudentMapper">
+
+    <insert id="insert" parameterType="Student" >
+        INSERT into studentlist(username,`name`,sex,hasClass) values (#{username},#{name},#{sex},#{hasClass})
+    </insert>
+
+    <delete id="delete" parameterType="Student">
+        delete from studentlist where username=#{username}
+    </delete>
+
+    <update id="edit" parameterType="Student" >
+        update studentlist set password =#{password} where username =#{username}
+    </update>
+
+    <select id="query" resultType="Student" >
+        select * from studentlist
+    </select>
+
+</mapper>

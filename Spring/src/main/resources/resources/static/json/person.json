@@ -1,0 +1,20 @@
+{
+    "code": 200,
+    "msg": "success",
+    "data": [
+        {
+            "name": "张小龙",
+            "sex": 1,
+            "birthday": 1638289528227,
+            "education": "博士",
+            "degree": "麻省理工博士",
+            "major": "软件工程",
+            "post": "微信小程序组总监",
+            "phone": "110110110",
+            "email": "2222222222@qq.com",
+            "address": "广东省汕头市",
+            "department": "广州微信总部",
+            "researchDirection": "社交"
+        }
+    ]
+}

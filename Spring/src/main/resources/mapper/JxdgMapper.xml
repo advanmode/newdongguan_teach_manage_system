@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="xuqiu.spring.Mapper.JxdgMapper">
+
+    <insert id="insert" parameterType="Jxdg" >
+        INSERT into jxdglist (`id`,`title`,`year`,`link`) values (#{id},#{title},#{year},#{link})
+    </insert>
+
+    <delete id="delete" parameterType="Jxdg">
+        delete from jxdglist where id=#{id}
+    </delete>
+
+<!--    <update id="edit" parameterType="Jxdg" >-->
+<!--    </update>-->
+
+    <select id="query" resultType="Jxdg" >
+        select * from jxdglist
+    </select>
+
+</mapper>

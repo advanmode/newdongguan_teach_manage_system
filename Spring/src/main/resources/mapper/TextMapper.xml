@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="xuqiu.spring.Mapper.TextMapper">
+
+    <insert id="insert" parameterType="Text" >
+        INSERT into textlist (id,title,`date`,`type`,text) values (#{id},#{title},#{date},#{type},#{text})
+    </insert>
+
+    <delete id="delete" parameterType="Text">
+        delete from textlist where id=#{id}
+    </delete>
+
+    <update id="edit" parameterType="Text" >
+        update textlist set title = #{title},`date`=#{date},type=#{type},text=#{text} where id = #{id}
+    </update>
+
+    <select id="query" resultType="Text" >
+        select * from textlist
+    </select>
+
+</mapper>

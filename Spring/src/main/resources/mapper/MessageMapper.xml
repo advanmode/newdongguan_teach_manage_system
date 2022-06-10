@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="xuqiu.spring.Mapper.MessageMapper">
+
+    <insert id="insert" parameterType="Message" >
+        INSERT into messagelist (id,`text`,sender,`time`,title) values (#{id},#{text},#{sender},#{time},#{title})
+    </insert>
+
+    <delete id="delete" parameterType="Message">
+        delete from messagelist where id=#{id}
+    </delete>
+
+<!--    <update id="edit" parameterType="Message" >-->
+<!--        update adminlist set password = #{password},`name`=#{name},usertype=#{usertype},email=#{email},phone=#{phone} where username = #{username}-->
+<!--    </update>-->
+
+    <select id="query" resultType="Message" >
+        select * from messagelist
+    </select>
+<!--    <select id="queryTheUser" resultType="xuqiu.spring.Pojo.Message">-->
+<!--        select * from adminlist where username=#{username}-->
+<!--    </select>-->
+
+</mapper>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="xuqiu.spring.Mapper.CourseMapper">
+
+    <insert id="insert" parameterType="Course" >
+        INSERT into courselist (id,`name`,score,`hour`,leadername,leadereducation,leaderdegree) values (#{id},#{name},#{score},#{hour},#{leadername},#{leadereducation},#{leaderdegree})
+    </insert>
+
+    <delete id="delete" parameterType="Course">
+        delete from courselist where id=#{id}
+    </delete>
+
+    <update id="edit" parameterType="Course" >
+        update courselist set `name` = #{name},`score`=#{score},`hour`=#{hour},leadername=#{leadername},leadereducation=#{leadereducation},leaderdegree=#{leaderdegree} where id = #{id}
+    </update>
+
+    <select id="query" resultType="Course" >
+        select * from courselist
+    </select>
+
+</mapper>

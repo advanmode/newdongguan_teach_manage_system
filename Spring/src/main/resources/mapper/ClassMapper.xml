@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="xuqiu.spring.Mapper.ClassMapper">
+
+    <insert id="insert" parameterType="Class" >
+        INSERT into classlist (id,`name`,grade,profess,course,no) values (#{id},#{name},#{grade},#{profess},#{course},#{no})
+    </insert>
+
+    <delete id="delete" parameterType="Class">
+        delete from classlist where id=#{id}
+    </delete>
+
+    <update id="edit" parameterType="Class" >
+        update classlist set `name`=#{name},grade = #{grade},profess=#{profess},course=#{course},no=#{no} where id = #{id}
+    </update>
+
+    <select id="query" resultType="Class" >
+        select * from classlist
+    </select>
+
+</mapper>
